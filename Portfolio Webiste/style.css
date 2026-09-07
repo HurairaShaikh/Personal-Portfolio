@@ -317,7 +317,7 @@ ul li {
 
 }
 
-.box-content button{
+.box-content button {
     margin-top: 10px;
     width: 100%;
     height: 40px;
@@ -327,6 +327,11 @@ ul li {
     color: #fff;
     font-family: "Montserrat-Bold";
 }
+
+#view-project i {
+    color: #fff;
+}
+
 
 .box {
     padding: 20px 0px 15px;
@@ -398,6 +403,13 @@ ul li {
     margin-top: 30px;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 input {
     height: 45px;
     width: 450px;
@@ -430,7 +442,7 @@ textarea {
     font-family: "Montserrat-Bold";
 }
 
-input[type="submit"] {
+button[type="submit"] {
     margin-top: 50px;
     width: 160px;
     height: 40px;
@@ -440,6 +452,8 @@ input[type="submit"] {
     font-size: 16px;
     padding: 0;
     margin-bottom: 20px;
+    background-color: transparent;
+    font-family: "Montserrat-Bold";
 }
 
 footer {
@@ -468,7 +482,8 @@ footer p {
 }
 
 .back a,
-.footer-links a,.footer-links i {
+.footer-links a,
+.footer-links i {
     text-decoration: none;
     font-size: 1.3rem;
     color: #fff;
@@ -479,4 +494,26 @@ footer i {
     color: #fff;
 }
 
-/* footer and contact heading and form of contact */
+#toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+
+    background: #222;
+    color: white;
+
+    padding: 15px 25px;
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s;
+}
+
+#toast.show {
+    opacity: 1;
+    visibility: visible;
+}
