@@ -34,22 +34,3 @@ form.addEventListener("submit", async function (e) {
             "Something went wrong. Please try again.";
     }
 });
-
-
-
-
-
-
-
-const drawerBtn = document.querySelector(".drawer-btn");
-const drawerLinks = document.querySelector(".drawer-links");
-
-drawerLinks.style.display = "none";
-
-drawerBtn.addEventListener("click", () => {
-    if (drawerLinks.style.display === "none") {
-        drawerLinks.style.display = "flex";
-    } else {
-        drawerLinks.style.display = "none";
-    }
-});
