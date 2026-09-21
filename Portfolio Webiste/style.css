@@ -36,7 +36,11 @@ html {
 body {
     background-color: #d7d7d7;
     color: #000;
+}
 
+/* Mobile NavBar */
+#mob-nav {
+    display: none;
 }
 
 /* Logo */
@@ -69,7 +73,6 @@ header {
     z-index: 1000;
     padding: 1rem;
     height: 6rem;
-
 }
 
 /* NavBAr */
@@ -85,7 +88,6 @@ header {
     height: 46px;
     padding: 0.9rem;
     font-family: 'Montserrat-Bold';
-
 }
 
 .nav-bar a:hover {
@@ -106,10 +108,10 @@ header {
 .name {
     font-size: 60px;
     font-family: 'Raleway-Bold';
-
 }
 
-#element {
+#element1,
+#element2 {
     font-family: 'Raleway-ExtraBold';
     font-size: 25px;
     color: #909090;
@@ -289,7 +291,7 @@ ul li {
 .boxes {
     display: grid;
     /* grid-template-columns: repeat(3, 1fr); */
-    grid-template-columns: repeat(auto-fit,minmax(350px, 1fr) );
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     padding: 0 10px 10px 10px;
     gap: 10px;
     max-height: none;
@@ -315,7 +317,6 @@ ul li {
 .box-img:hover {
     cursor: pointer;
     transform: scale(1.1);
-
 }
 
 .box-content button {
@@ -340,6 +341,7 @@ ul li {
     border: 1px solid #c4c4c4;
     border-radius: 20px;
     background-color: #c4c4c4;
+    text-align: center;
 }
 
 .tech span {
@@ -457,6 +459,7 @@ button[type="submit"] {
     font-family: "Montserrat-Bold";
 }
 
+/* footer */
 footer {
     height: 150px;
     background-color: #131362;
@@ -464,8 +467,8 @@ footer {
     /* padding:2rem 0 0 5rem; */
     text-align: center;
     font-family: "Montserrat-Bold";
-
 }
+
 
 footer p {
     font-size: 10px;
@@ -519,6 +522,18 @@ footer i {
     visibility: visible;
 }
 
+.mobile-menu {
+    display: none;
+}
+
+#mob-img {
+    display: none;
+}
+
+.container,
+.right-mob {
+    display: none;
+}
 
 /* Tab Screens */
 @media screen and (min-width:768px) and (max-width:1024px) {
@@ -544,10 +559,142 @@ footer i {
         overflow-x: hidden;
     }
 
+    header,
+    #Home {
+        background-image: none;
+        background-color: #131362;
+    }
+
+    header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 70px;
+        padding: 5px 15px;
+        margin-bottom: -1px;
+        height: auto;
+        min-height: 6rem;
+    }
+
+    #web-img {
+        display: none;
+    }
+
+    header #mob-img {
+        display: block;
+        width: 100px;
+        height: auto;
+    }
+
+    header .nav-bar {
+        display: none;
+    }
+
+    #Home {
+        height: auto;
+        min-height: 88svh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: end;
+        background-image: url(./assets/images/mob-me.png);
+        background-repeat: no-repeat;
+        background-position: center calc(100% - 70px);
+        background-size: auto 100%;
+        background-attachment: local;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-width: auto;
+        height: auto;
+        min-height: 200px;
+        /* background-color: rgba(94, 110, 135, 0.85); */
+    }
+
+    .container::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        width: 100%;
+        /* height: 250px; */
+         height: clamp(180px, 32svh, 300px);
+
+        background: rgba(94, 110, 135, 0.85);
+
+        clip-path: polygon(0 30%,
+                100% 0,
+                100% 100%,
+                0 100%);
+
+        z-index: 0;
+    }
+
+    .container>* {
+        position: relative;
+        z-index: 1;
+    }
+
+
+    .mob-heading {
+        margin-left: 5px;
+        font-size: 20px;
+        font-family: 'Raleway-Bold';
+        color: #fff;
+        line-height: 1;
+    }
+   
+    .mob-name {
+        width: 100%;
+        flex-shrink: 0;
+        font-size: 40px;
+        font-family: 'Raleway-Bold';
+        color: white;
+    }
+
+    .socials i {
+        font-size: 2.5rem;
+        margin-bottom: 25px;
+        color: white;
+        text-align: center;
+    }
+
+    .socials {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 40px;
+    }
+/* center socials btn and have to do much more?? */
+
+    #element2 {
+        width: 100%;
+        font-size: 22px;
+        color: rgb(245, 237, 237);
+    }
+
+    .left-mob {
+        flex-shrink: 0;
+        margin-top: 5rem;
+        margin-left: 60px;
+    }
+
+    .left,
+    .right {
+        display: none;
+    }
+
     #about {
         height: auto;
         min-height: 0;
         margin: 3rem 1rem;
+        scroll-margin-top: 40px;
     }
 
     #about img {
@@ -585,7 +732,9 @@ footer i {
     }
 
     .boxes {
-        grid-template-columns: repeat(auto-fit,minmax(350px ,1fr));
+        display: grid;
+        gap: 15px;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         justify-content: center;
     }
 
@@ -604,6 +753,53 @@ footer i {
     #contact-me input,
     #contact-me textarea {
         width: 100%;
+    }
+
+    /* DropDown Menu of NavBar */
+    .mobile-menu {
+        display: block;
+        margin-left: auto;
+        position: relative;
+    }
+
+    #menu-btn {
+        background: transparent;
+        border: none;
+        color: #131362;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    #menu-btn i {
+        font-size: 2rem;
+        color: white;
+    }
+
+    .dropdown {
+        display: none;
+        position: absolute;
+        top: 65px;
+        right: 0;
+        width: 200px;
+        background-color: #131362;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        z-index: 2000;
+    }
+
+    .dropdown.active {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .dropdown a {
+        color: white;
+        text-decoration: none;
+        font-family: "Montserrat-Bold";
+        font-size: 16px;
+        padding: 12px;
     }
 
 }

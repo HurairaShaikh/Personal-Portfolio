@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Huraira Shaikh</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="./assets/images/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
         integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -14,7 +14,8 @@
 
 <body>
     <header>
-        <img src="./assets//images/HS Logo.png" alt="logo">
+        <img src="./assets/images/web-logos.png" alt="logo" id="web-img">
+        <img src="./assets/images/mob-logo.png" alt="logo" id="mob-img">
         <div class="nav-bar">
             <nav>
                 <a href="#Home">Home</a>
@@ -25,6 +26,24 @@
                 <a href="#contact-me">Contact Me</a>
             </nav>
         </div>
+
+        <div class="mobile-menu">
+
+        <button id="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="dropdown" id="dropdown">
+
+            <a href="#Home">Home</a>
+            <a href="#about">About</a>
+            <a href="#Skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact-me">Contact Me</a>
+
+        </div>
+
+    </div>
     </header>
 
     <main>
@@ -41,7 +60,7 @@
                     </span>
                     <br>
 
-                    <span id="element">
+                    <span id="element1">
                     </span>
                 </div>
                 <div class="socials">
@@ -57,8 +76,36 @@
                     <img src="./assets/images/me.png" alt="ME">
                 </div>
             </section>
-        </div>
 
+
+            <!-- Mobile HomePage -->
+              
+            <div class="container">
+                  <section class="left-mob">
+                <div class="mob-heading">
+                    Hi, I am
+                    <br>
+                </div>
+                <div class="mob-names">
+                    <span class="mob-name">
+                        Huraira Shaikh
+                    </span>
+                    <br>
+                    <span id="element2">
+                    </span>
+                </div>
+                </section>
+                <div class="socials">
+                   <a href="https://github.com/HurairaShaikh"
+                    target="_blank"><i class="fa-brands fa-github"></i></a>
+                   <a href="https://linkedin.com/in/huraira-shiekh-3093172a6" 
+                   target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hurairashiekh076@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a>
+                </div>
+                
+            </div>
+        </div>
+        <!--  till here -->
         <!-- <hr> -->
         <section id="about">
             <h2><span>ABOUT ME</span></h2>
@@ -169,7 +216,7 @@
                         </div>
                         <p class="description">A mobile e-commerce app that enables users to explore and
                             purchase shoes from a variety of popular brands. Users can browse different collections, select their preferred shoe size, add products to their cart, and place orders conveniently.The app also provides order history and tracking features, allowing users to monitor their purchases. For secure and flexible transactions, users can make payments through card orbank payment options of their choice.</p>
-                         <a href="https://github.com/HurairaShaikh" target="_blank"><button id="view-project"><i class="fa-brands fa-github"></i> View project</button></a>
+                         <a href="https://github.com/HurairaShaikh/e-commerce_app.git" target="_blank"><button id="view-project"><i class="fa-brands fa-github"></i> View project</button></a>
                     </div>
                 </div>
                 <div class="box2 box">
@@ -188,7 +235,7 @@
                         <p class="description">
                             A mobile authentication UI featuring a clean and user-friendly interface. The app uses Firebase Authentication to securely manage user SignUp & SignIn Functionality  and also supports phone number authentication with OTP verification. It provides a smooth sign-in experience while ensuring secure and reliable user authentication.
                         </p>
-                     <a href="https://github.com/HurairaShaikh" target="_blank"><button id="view-project"><i class="fa-brands fa-github"></i> View project</button></a>
+                     <a href="https://github.com/HurairaShaikh/Awesome_login.git" target="_blank"><button id="view-project"><i class="fa-brands fa-github"></i> View project</button></a>
                     </div>
                 </div>
                 <div class="box3 box">
@@ -206,7 +253,7 @@
                         <p class="description">A mobile weather application that uses a Weather API to provide real-time weather information. The app displays essential weather details such as temperature, humidity, air pressure, wind speed, and weather conditions, with dynamic weather icons based on the current forecast. Users can also view upcoming weather forecasts and refresh the data to get the latest information.
                         </p>
                         <p></p>
-                      <a href="https://github.com/HurairaShaikh" target="_blank"><button id="view-project"><i class="fa-brands fa-github"></i> View project</button></a>
+                      <a href="https://github.com/HurairaShaikh/Weather_app.git" target="_blank"><button id="view-project"><i class="fa-brands fa-github"></i> View project</button></a>
                     </div>
                 </div>
                 <div class="box4 box">
@@ -225,7 +272,7 @@
                         <p class="description">
                             A mobile currency converter application that uses a real-time exchange rate API to provide accurate currency conversions. Users can enter an amount, select their preferred source and target currencies, and instantly view the converted value. The app features a simple and intuitive interface designed for quick and convenient currency conversion.
                         </p>
-                       <a href="https://github.com/HurairaShaikh" target="_blank"><button id="view-project"><i class="fa-brands fa-github"></i> View project</button></a>
+                       <a href="https://github.com/HurairaShaikh/Currency_Converter.git" target="_blank"><button id="view-project"><i class="fa-brands fa-github"></i> View project</button></a>
                     </div>
                 </div>
                 <div class="box5 box">
@@ -247,7 +294,7 @@
                         <p class="description">
                             A collection of interactive browser-based games developed using HTML, CSS, and JavaScript. The project includes classic Tic Tac Toe and Rock Paper Scissors games with responsive user interfaces, interactive gameplay, Win Messages, score tracking, and real-time game logic implemented through JavaScript.
                         </p>
-                        <a href="https://github.com/HurairaShaikh" target="_blank"><button id="view-project"><i class="fa-brands fa-github"></i> View project</button></a>
+                        <a href="https://github.com/HurairaShaikh/Web-Games.git" target="_blank"><button id="view-project"><i class="fa-brands fa-github"></i> View project</button></a>
                     </div>
                 </div>
                 <div class="box6 box">
@@ -269,7 +316,7 @@
                         <p class="description">
                             Responsive e-commerce website UI clones inspired by Daraz and Amazon, featuring modern product layouts, navigation sections, promotional banners, and interactive image carousels. The projects focus on recreating key e-commerce interface elements while maintaining a clean, responsive, and user-friendly design across different screen sizes.
                         </p>
-                       <a href="https://github.com/HurairaShaikh" target="_blank"><button id="view-project"><i class="fa-brands fa-github"></i> View project</button></a>
+                       <a href="https://github.com/HurairaShaikh/UI-Clones.git" target="_blank"><button id="view-project"><i class="fa-brands fa-github"></i> View project</button></a>
                     </div>
                 </div>
             </div>
@@ -301,8 +348,8 @@
             <a href="#Home">
                 <i class="fa-solid fa-angles-up"></i>
                 <p>BACK TO TOP</p>
+            </a>
             </div>
-        </a>
         <div class="footer-links">
             <a href="https://linkedin.com/in/huraira-shiekh-3093172a6" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
             <a href="https://www.facebook.com/huraira.shaikh.319" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>

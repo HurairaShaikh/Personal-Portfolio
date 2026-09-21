@@ -1,6 +1,12 @@
-let element = document.getElementById("element");
+let element1 = document.getElementById("element1");
+let element2 = document.getElementById("element2");
 
-var typed = new Typed(element, {
+var typed = new Typed(element1, {
+    strings: ['Software Engineer', 'FrontEnd Developer', 'Web Developer', 'Mobile App Developer'],
+    typeSpeed: 50,
+    loop: true
+});
+var typed = new Typed(element2, {
     strings: ['Software Engineer', 'FrontEnd Developer', 'Web Developer', 'Mobile App Developer'],
     typeSpeed: 50,
     loop: true
@@ -33,4 +39,14 @@ form.addEventListener("submit", async function (e) {
         successMessage.textContent =
             "Something went wrong. Please try again.";
     }
+});
+
+
+const menuBtn = document.getElementById("menu-btn");
+const dropdown = document.getElementById("dropdown");
+
+menuBtn.addEventListener("click", () => {
+
+    dropdown.classList.toggle("active");
+
 });
